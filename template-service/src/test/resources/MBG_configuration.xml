@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="MySQLTables" targetRuntime="MyBatis3">
+        <plugin type="com.fookoo.template.server.mybatis.MySQLGeneratorPrimaryKeyPlugin"/>
+        <plugin type="com.fookoo.template.server.mybatis.EntitySerializablePlugin"/>
+        <!--覆盖生成XML文件-->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
+        <commentGenerator type="com.fookoo.template.server.mybatis.MyCommentGenerator">
+        </commentGenerator>
+        <!-- 生发环境数据库配置:修改配置 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://db224.dev.rs.com:3306/db_starhome?useSSL=false"
+                        userId="user_starthome" password="user_starthome">
+            <property name="useInformationSchema" value="true"/>
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+            <property name="useJSR310Types" value="true"/>
+        </javaTypeResolver>
+        <!--targetProject请使用绝对路径-->
+        <javaModelGenerator targetPackage="com.fookoo.template.server.entity"
+                            targetProject="D:\xiongcw.code\outsource\spring-template\template-service\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="com.fookoo.template.server.dao.base"
+                         targetProject="D:\xiongcw.code\outsource\spring-template\template-service\src\main\resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.fookoo.template.server.dao.base"
+                             targetProject="D:\xiongcw.code\outsource\spring-template\template-service\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table tableName="tb_system_user_info" enableCountByExample="true"
+               enableUpdateByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" selectByExampleQueryId="true"
+               enableInsert="true" enableUpdateByPrimaryKey="true"
+               enableDeleteByPrimaryKey="true" domainObjectName="SystemUserInfo">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+
+    </context>
+</generatorConfiguration>
