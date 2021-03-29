@@ -12,7 +12,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @ServletComponentScan
 @EnableAspectJAutoProxy(exposeProxy = true)
 @EnableScheduling
-@ComponentScan(value = "com.fookoo.template.server.service")
+@ComponentScan(value = "com.fookoo.template")
 @MapperScan(value = {"com.fookoo.template.server.dao"})
 public class ApplicationMainClient {
 

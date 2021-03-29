@@ -20,7 +20,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(authenticationInterceptor())
                 .addPathPatterns("/**").excludePathPatterns("/login", "/getVerify", "/user/register", "/debug/**")
-                .excludePathPatterns("/swagger-resources/**", "/swagger-ui.html","/v2/api-docs", "/doc.html", "/error");   // 拦截所有请求，通过判断是否有 @LoginRequired 注解 决定是否需要登录
+                .excludePathPatterns("/swagger-resources/**", "/v2/api-docs", "/doc.html", "/error");   // 拦截所有请求，通过判断是否有 @LoginRequired 注解 决定是否需要登录
 
     }
     @Bean
