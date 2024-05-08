@@ -3,15 +3,14 @@ package com.fookoo.template.e.interceptor;
 
 
 import com.fookoo.template.e.aop.PassLogin;
-import com.fookoo.template.server.constants.CommonConstants;
-import com.fookoo.template.server.constants.ExceptionDef;
-import com.fookoo.template.server.exception.ServiceException;
-import com.fookoo.template.server.service.user.UserService;
-import com.fookoo.template.server.utils.LoginUserHolder;
-import com.fookoo.template.server.utils.StringUtils;
+import com.template.constants.CommonConstants;
+import com.template.constants.ExceptionDef;
+import com.template.exception.ServiceException;
+import com.template.utils.LoginUserHolder;
+import com.template.utils.StringUtils;
 
 
-import com.spring.template.pojo.User;
+import com.template.pojo.User;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

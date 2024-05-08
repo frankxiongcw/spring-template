@@ -3,8 +3,8 @@ package com.fookoo.template.e.controller;
 
 import com.fookoo.template.e.aop.PassLogin;
 import com.fookoo.template.server.service.user.UserService;
-import com.fookoo.template.server.utils.LoginUserHolder;
-import com.spring.template.pojo.User;
+import com.template.utils.LoginUserHolder;
+import com.template.pojo.User;
 import com.spring.template.pojo.dto.SystemUserSaveDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

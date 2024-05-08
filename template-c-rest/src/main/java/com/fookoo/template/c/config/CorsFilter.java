@@ -1,6 +1,6 @@
 package com.fookoo.template.c.config;
 
-import com.fookoo.template.server.utils.StringUtils;
+import com.template.utils.StringUtils;
 import com.google.common.collect.Lists;
 import org.springframework.core.annotation.Order;
 

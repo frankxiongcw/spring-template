@@ -1,6 +1,6 @@
 package com.fookoo.template.c.aop;
 
-import com.fookoo.template.server.utils.LoginUserHolder;
+import com.template.utils.LoginUserHolder;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;

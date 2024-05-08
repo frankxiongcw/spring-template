@@ -1,6 +1,6 @@
 package com.fookoo.template.c.aop;
 
-import com.spring.template.pojo.User;
+import com.template.pojo.User;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 

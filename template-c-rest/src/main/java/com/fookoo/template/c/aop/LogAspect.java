@@ -1,7 +1,7 @@
 package com.fookoo.template.c.aop;
 
 import com.alibaba.fastjson.JSON;
-import com.spring.template.pojo.BusinessCardDetailParam;
+import com.template.pojo.BusinessCardDetailParam;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.ArrayUtils;
 import org.aspectj.lang.JoinPoint;

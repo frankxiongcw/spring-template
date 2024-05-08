@@ -2,7 +2,7 @@ package com.fookoo.template.c.aop;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.spring.template.pojo.ResultResponse;
+import com.template.pojo.ResultResponse;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.MediaType;

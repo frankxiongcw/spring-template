@@ -1,10 +1,10 @@
 package com.fookoo.template.e.config;
 
 
-import com.fookoo.template.server.constants.ExceptionDef;
-import com.fookoo.template.server.exception.ServiceException;
-import com.fookoo.template.server.utils.StringUtils;
-import com.spring.template.pojo.ResultResponse;
+import com.template.constants.ExceptionDef;
+import com.template.exception.ServiceException;
+import com.template.utils.StringUtils;
+import com.template.pojo.ResultResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.Order;

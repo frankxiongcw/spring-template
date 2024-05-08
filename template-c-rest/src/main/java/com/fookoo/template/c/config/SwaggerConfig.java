@@ -2,7 +2,7 @@ package com.fookoo.template.c.config;
 
 
 
-import com.spring.template.pojo.User;
+import com.template.pojo.User;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;

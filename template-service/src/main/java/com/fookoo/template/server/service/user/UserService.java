@@ -1,15 +1,17 @@
 package com.fookoo.template.server.service.user;
 
 
-import com.fookoo.template.server.constants.CommonConstants;
-import com.fookoo.template.server.constants.ExceptionDef;
+
 import com.fookoo.template.server.dao.base.SystemUserInfoMapper;
 import com.fookoo.template.server.entity.SystemUserInfo;
 import com.fookoo.template.server.entity.SystemUserInfoExample;
-import com.fookoo.template.server.exception.ServiceException;
-import com.fookoo.template.server.utils.*;
-import com.spring.template.pojo.User;
+
+import com.template.pojo.User;
 import com.spring.template.pojo.dto.SystemUserSaveDTO;
+import com.template.constants.CommonConstants;
+import com.template.constants.ExceptionDef;
+import com.template.exception.ServiceException;
+import com.template.utils.*;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
