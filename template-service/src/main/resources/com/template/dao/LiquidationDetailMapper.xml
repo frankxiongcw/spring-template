@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.template.dao.LiquidationDetailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.template.entity.LiquidationDetail">
+        <id column="id" property="id" />
+        <result column="batch_no" property="batchNo" />
+        <result column="clearing_detail_id" property="clearingDetailId" />
+        <result column="avail_liq_amount" property="availLiqAmount" />
+        <result column="pay_channel_mer_no" property="payChannelMerNo" />
+        <result column="pay_channel" property="payChannel" />
+        <result column="pay_way" property="payWay" />
+        <result column="biz_source" property="bizSource" />
+        <result column="order_source" property="orderSource" />
+        <result column="shop_no" property="shopNo" />
+        <result column="shop_name" property="shopName" />
+        <result column="mer_no" property="merNo" />
+        <result column="mer_name" property="merName" />
+        <result column="market_no" property="marketNo" />
+        <result column="market_name" property="marketName" />
+        <result column="company_code" property="companyCode" />
+        <result column="company_name" property="companyName" />
+        <result column="order_no" property="orderNo" />
+        <result column="order_type" property="orderType" />
+        <result column="order_pay_no" property="orderPayNo" />
+        <result column="trade_type" property="tradeType" />
+        <result column="pay_seq_no" property="paySeqNo" />
+        <result column="trade_reference_no" property="tradeReferenceNo" />
+        <result column="liq_type" property="liqType" />
+        <result column="trade_time" property="tradeTime" />
+        <result column="order_amount" property="orderAmount" />
+        <result column="discount_amount" property="discountAmount" />
+        <result column="deduction_amount" property="deductionAmount" />
+        <result column="order_fee" property="orderFee" />
+        <result column="order_fee_payer" property="orderFeePayer" />
+        <result column="trade_amount" property="tradeAmount" />
+        <result column="liq_amount" property="liqAmount" />
+        <result column="liq_fee_platform" property="liqFeePlatform" />
+        <result column="liq_fee_merchant" property="liqFeeMerchant" />
+        <result column="liq_fee_payer" property="liqFeePayer" />
+        <result column="trade_fee" property="tradeFee" />
+        <result column="trade_fee_settled" property="tradeFeeSettled" />
+        <result column="other_channel_amount_01" property="otherChannelAmount01" />
+        <result column="platform_fee" property="platformFee" />
+        <result column="commission_fee" property="commissionFee" />
+        <result column="channel_commission_fee" property="channelCommissionFee" />
+        <result column="refund_amount" property="refundAmount" />
+        <result column="refund_fee" property="refundFee" />
+        <result column="plan_rebate_date" property="planRebateDate" />
+        <result column="withdraw_account" property="withdrawAccount" />
+        <result column="bank" property="bank" />
+        <result column="bank_name" property="bankName" />
+        <result column="bank_code" property="bankCode" />
+        <result column="bank_provice" property="bankProvice" />
+        <result column="bank_city" property="bankCity" />
+        <result column="bank_user" property="bankUser" />
+        <result column="bank_account" property="bankAccount" />
+        <result column="virtual_deposit_account" property="virtualDepositAccount" />
+        <result column="virtual_withdraw_account" property="virtualWithdrawAccount" />
+        <result column="platform_virtual_account" property="platformVirtualAccount" />
+        <result column="rebate_id" property="rebateId" />
+        <result column="rebate_status" property="rebateStatus" />
+        <result column="rebate_generator_no" property="rebateGeneratorNo" />
+        <result column="rebate_generator_name" property="rebateGeneratorName" />
+        <result column="rebate_generated_time" property="rebateGeneratedTime" />
+        <result column="rebate_time" property="rebateTime" />
+        <result column="rebate_receipt" property="rebateReceipt" />
+        <result column="rebate_fee_settled" property="rebateFeeSettled" />
+        <result column="rebate_service_fee" property="rebateServiceFee" />
+        <result column="deletion_flag" property="deletionFlag" />
+        <result column="ctime" property="ctime" />
+        <result column="mtime" property="mtime" />
+        <result column="memo" property="memo" />
+        <result column="rebate_divide_status" property="rebateDivideStatus" />
+        <result column="brokerage_divide_status" property="brokerageDivideStatus" />
+        <result column="liq_market_no" property="liqMarketNo" />
+        <result column="ali_business_serial_no" property="aliBusinessSerialNo" />
+        <result column="rebate_divide_serial_no" property="rebateDivideSerialNo" />
+        <result column="brokerage_divide_serial_no" property="brokerageDivideSerialNo" />
+        <result column="brokerage_withdraw_no" property="brokerageWithdrawNo" />
+        <result column="is_new" property="isNew" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, batch_no, clearing_detail_id, avail_liq_amount, pay_channel_mer_no, pay_channel, pay_way, biz_source, order_source, shop_no, shop_name, mer_no, mer_name, market_no, market_name, company_code, company_name, order_no, order_type, order_pay_no, trade_type, pay_seq_no, trade_reference_no, liq_type, trade_time, order_amount, discount_amount, deduction_amount, order_fee, order_fee_payer, trade_amount, liq_amount, liq_fee_platform, liq_fee_merchant, liq_fee_payer, trade_fee, trade_fee_settled, other_channel_amount_01, platform_fee, commission_fee, channel_commission_fee, refund_amount, refund_fee, plan_rebate_date, withdraw_account, bank, bank_name, bank_code, bank_provice, bank_city, bank_user, bank_account, virtual_deposit_account, virtual_withdraw_account, platform_virtual_account, rebate_id, rebate_status, rebate_generator_no, rebate_generator_name, rebate_generated_time, rebate_time, rebate_receipt, rebate_fee_settled, rebate_service_fee, deletion_flag, ctime, mtime, memo, rebate_divide_status, brokerage_divide_status, liq_market_no, ali_business_serial_no, rebate_divide_serial_no, brokerage_divide_serial_no, brokerage_withdraw_no, is_new
+    </sql>
+
+</mapper>
