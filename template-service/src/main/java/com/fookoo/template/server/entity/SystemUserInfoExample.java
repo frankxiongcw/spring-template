@@ -1,4 +1,4 @@
-package com.fookoo.template.server.entity;
+package com.template.server.entity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;

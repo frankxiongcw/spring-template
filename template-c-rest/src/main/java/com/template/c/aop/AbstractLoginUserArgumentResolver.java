@@ -1,4 +1,4 @@
-package com.fookoo.template.c.aop;
+package com.template.c.aop;
 
 import com.template.api.pojo.User;
 import org.springframework.core.MethodParameter;

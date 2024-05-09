@@ -1,4 +1,4 @@
-package com.fookoo.template.c.interceptor;
+package com.template.c.interceptor;
 
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.web.bind.annotation.ControllerAdvice;

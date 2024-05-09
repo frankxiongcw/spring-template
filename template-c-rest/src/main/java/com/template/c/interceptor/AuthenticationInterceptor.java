@@ -1,7 +1,7 @@
-package com.fookoo.template.c.interceptor;
+package com.template.c.interceptor;
 
 
-import com.fookoo.template.c.aop.PassLogin;
+import com.template.c.aop.PassLogin;
 import com.template.core.constants.CommonConstants;
 import com.template.core.constants.ExceptionDef;
 import com.template.core.exception.ServiceException;

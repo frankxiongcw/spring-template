@@ -1,4 +1,4 @@
-package com.fookoo.template.c.aop;
+package com.template.c.aop;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

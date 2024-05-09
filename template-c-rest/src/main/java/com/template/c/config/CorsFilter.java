@@ -1,4 +1,4 @@
-package com.fookoo.template.c.config;
+package com.template.c.config;
 
 import com.template.core.utils.StringUtils;
 import com.google.common.collect.Lists;

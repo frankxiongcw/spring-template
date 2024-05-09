@@ -1,7 +1,7 @@
-package com.fookoo.template.server.dao.base;
+package com.template.server.dao.base;
 
-import com.fookoo.template.server.entity.SystemUserInfo;
-import com.fookoo.template.server.entity.SystemUserInfoExample;
+import com.template.server.entity.SystemUserInfo;
+import com.template.server.entity.SystemUserInfoExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

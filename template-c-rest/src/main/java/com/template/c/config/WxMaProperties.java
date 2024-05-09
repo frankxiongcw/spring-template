@@ -1,4 +1,4 @@
-package com.fookoo.template.c.config;
+package com.template.c.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

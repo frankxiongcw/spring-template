@@ -1,4 +1,4 @@
-package com.fookoo.template.c.aop;
+package com.template.c.aop;
 
 import com.alibaba.fastjson.JSON;
 import com.template.api.pojo.BusinessCardDetailParam;

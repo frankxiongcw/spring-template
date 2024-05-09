@@ -1,7 +1,7 @@
-package com.fookoo.template.c.config;
+package com.template.c.config;
 
-import com.fookoo.template.c.aop.LoginUserArgumentResolver;
-import com.fookoo.template.c.interceptor.AuthenticationInterceptor;
+import com.template.c.aop.LoginUserArgumentResolver;
+import com.template.c.interceptor.AuthenticationInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;

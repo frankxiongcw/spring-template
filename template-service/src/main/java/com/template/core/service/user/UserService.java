@@ -2,9 +2,9 @@ package com.template.core.service.user;
 
 
 
-import com.fookoo.template.server.dao.base.SystemUserInfoMapper;
-import com.fookoo.template.server.entity.SystemUserInfo;
-import com.fookoo.template.server.entity.SystemUserInfoExample;
+import com.template.server.dao.base.SystemUserInfoMapper;
+import com.template.server.entity.SystemUserInfo;
+import com.template.server.entity.SystemUserInfoExample;
 
 import com.template.core.constants.CommonConstants;
 import com.template.core.constants.ExceptionDef;
