@@ -1,15 +1,15 @@
-package ${package.Controller};
+package  ${cfg.ControllerPackage};
 
 
 import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.List;
 import ${package.Service}.${table.serviceName};
-import ${cfg.BasePackage}.utils.PageResultUtil;
+import ${cfg.BasePackage}.core.utils.PageResultUtil;
 import ${cfg.DTOPackage}.${entity}QueryDTO;
 import ${cfg.DTOPackage}.${entity}DTO;
 import ${cfg.VOPackage}.${entity}VO;
-import ${cfg.BasePackage}.pojo.PageResult;
+import ${cfg.BasePackage}.api.pojo.PageResult;
 <#if swagger2>
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

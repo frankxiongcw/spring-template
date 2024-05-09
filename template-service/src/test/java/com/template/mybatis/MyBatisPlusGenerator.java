@@ -49,8 +49,11 @@ public class MyBatisPlusGenerator {
      * 基础包路径
      */
     private static final String BASE_PACKAGE = "com.template";
-    private static final String POJO_DTO_PACKAGE = BASE_PACKAGE+".pojo.dto";
-    private static final String POJO_VO_PACKAGE = BASE_PACKAGE+".pojo.vo";
+
+    private static final String BASE_E_PACKAGE = "com.template.e.controller";
+    private static final String BASE_CORE_PACKAGE = "com.template.core";
+    private static final String POJO_DTO_PACKAGE = BASE_PACKAGE+".api.pojo.dto";
+    private static final String POJO_VO_PACKAGE = BASE_PACKAGE+".api.pojo.vo";
     /**
      * 表名
      */
@@ -93,7 +96,7 @@ public class MyBatisPlusGenerator {
         final PackageConfig pc = new PackageConfig();
 //        pc.setModuleName("");
         pc.setMapper("dao");
-        pc.setParent(BASE_PACKAGE);
+        pc.setParent(BASE_CORE_PACKAGE);
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -107,9 +110,7 @@ public class MyBatisPlusGenerator {
                 map.put("DTOPackage", POJO_DTO_PACKAGE);
                 map.put("VOPackage", POJO_VO_PACKAGE);
                 map.put("BasePackage", BASE_PACKAGE);
-//                map.put("voPackage", PARENT_VO_PACKAGE);
-//                map.put("queryDtoPackage", PARENT_Query_DTO_PACKAGE);
-//                map.put("dtoIgnoreFields", DTO_IGNORE_FIELD);
+                map.put("ControllerPackage", BASE_E_PACKAGE);
                 this.setMap(map);
             }
         };
@@ -133,8 +134,8 @@ public class MyBatisPlusGenerator {
                 // 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
                 return projectApiPath + "/src/main/java/"
                         + (StringUtils.isBlank(pc.getModuleName()) ? "" : pc.getModuleName() + "/")
-                        + pc.getParent().replace(".", "/")
-                        + "/pojo//dto"
+                        + BASE_PACKAGE.replace(".", "/")
+                        + "/api/pojo/dto"
                         + "/" + tableInfo.getEntityName() + "QueryDTO" + StringPool.DOT_JAVA;
             }
         });
@@ -145,8 +146,8 @@ public class MyBatisPlusGenerator {
                 // 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
                 return projectApiPath + "/src/main/java/"
                         + (StringUtils.isBlank(pc.getModuleName()) ? "" : pc.getModuleName() + "/")
-                        + pc.getParent().replace(".", "/")
-                        + "/pojo/dto"
+                        + BASE_PACKAGE.replace(".", "/")
+                        + "/api/pojo/dto"
                         + "/" + tableInfo.getEntityName() + "DTO" + StringPool.DOT_JAVA;
             }
         });
@@ -157,8 +158,8 @@ public class MyBatisPlusGenerator {
                 // 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
                 return projectApiPath + "/src/main/java/"
                         + (StringUtils.isBlank(pc.getModuleName()) ? "" : pc.getModuleName() + "/")
-                        + pc.getParent().replace(".", "/")
-                        + "/pojo/vo"
+                        + BASE_PACKAGE.replace(".", "/")
+                        + "/api/pojo/vo"
                         + "/" + tableInfo.getEntityName() + "VO" + StringPool.DOT_JAVA;
             }
         });
@@ -193,8 +194,8 @@ public class MyBatisPlusGenerator {
                 // 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
                 return projectRestPath + "/src/main/java/"
                         + (StringUtils.isBlank(pc.getModuleName()) ? "" : pc.getModuleName() + "/")
-                        + pc.getParent().replace(".", "/")
-                        + "/controller"
+                        + BASE_PACKAGE.replace(".", "/")
+                        + "/e/controller"
                         + "/" + tableInfo.getEntityName() + "Controller" + StringPool.DOT_JAVA;
             }
         });

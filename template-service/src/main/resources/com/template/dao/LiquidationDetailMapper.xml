@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.template.dao.LiquidationDetailMapper">
+<mapper namespace="com.template.core.dao.LiquidationDetailMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.template.entity.LiquidationDetail">
+    <resultMap id="BaseResultMap" type="com.template.core.entity.LiquidationDetail">
         <id column="id" property="id" />
         <result column="batch_no" property="batchNo" />
         <result column="clearing_detail_id" property="clearingDetailId" />
