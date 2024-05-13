@@ -37,6 +37,11 @@ public class ${table.serviceName} extends ${superServiceImplClass}<${table.mappe
     private ${table.mapperName} ${table.entityPath}Mapper;
 
 
+    /**
+    * ${table.comment!}分页列表查询
+    * @param queryDTO ${table.comment!} 查询实体
+    * @return ${table.comment!} 分页数据
+    */
     public PageResult<${entity}VO> listByPage (${entity}QueryDTO queryDTO) {
         PageHelper.startPage(queryDTO.getPageNum(), queryDTO.getPageSize(), true);
         LambdaQueryWrapper<${entity}> wrapper = new LambdaQueryWrapper<>();
@@ -45,27 +50,47 @@ public class ${table.serviceName} extends ${superServiceImplClass}<${table.mappe
         return PageResultUtil.pageResult(list, ${entity}VO.class); 
     }
 
+    /**
+    * ${table.comment!}详情接口
+    * @param id  ${table.comment!} 主键ID
+    * @return ${entity}VO
+    */
     public ${entity}VO detail (Long id) {
         ${entity} detail = ${table.entityPath}Mapper.selectById(id);
         return BeanUtils.copyProperties(detail, ${entity}VO.class);
     }
 
+    /**
+    * ${table.comment!}新增接口
+    * @param liquidationDetail ${table.comment!} 新增实体
+    * @return Boolean
+    */
     @Transactional
     public Boolean save(${entity}DTO saveDTO){
         ${entity} ${table.entityPath} = BeanUtils.copyProperties(saveDTO, ${entity}.class);
-        EntityUserUtil.addCreateAndModifyUser(${table.entityPath},new User());
+        EntityUserUtil.addCreateAndModifyUser(${table.entityPath},LoginUserHolder.get());
         save(${table.entityPath});
         return true;
     }
 
+    /**
+    * ${table.comment!}更新接口
+    * @param liquidationDetail ${table.comment!} 更新实体
+    * @return Boolean
+    */
     @Transactional
     public Boolean update(${entity}DTO updateDTO){
         ${entity} ${table.entityPath} = BeanUtils.copyProperties(updateDTO, ${entity}.class);
-        EntityUserUtil.addModifyUser(${table.entityPath},new User());
+        EntityUserUtil.addModifyUser(${table.entityPath},LoginUserHolder.get());
         saveOrUpdate(${table.entityPath});
         return true;
     }
 
+    /**
+    * ${table.comment!}删除接口
+    * @param id  ${table.comment!} 主键ID
+    * @return Boolean
+    */
     @Transactional
     public Boolean delete(Long id){
         ${entity} detail = ${table.entityPath}Mapper.selectById(id);

@@ -3,7 +3,7 @@ package com.template.core.service;
 import com.template.core.entity.LiquidationDetail;
 import com.template.core.dao.LiquidationDetailMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.template.core.entity.User;
+import com.template.api.pojo.User;
 import com.template.core.utils.*;
 import com.template.api.pojo.dto.LiquidationDetailQueryDTO;
 import com.template.api.pojo.dto.LiquidationDetailDTO;
@@ -32,6 +32,7 @@ public class LiquidationDetailService extends ServiceImpl<LiquidationDetailMappe
     private LiquidationDetailMapper liquidationDetailMapper;
 
 
+
     public PageResult<LiquidationDetailVO> listByPage (LiquidationDetailQueryDTO queryDTO) {
         PageHelper.startPage(queryDTO.getPageNum(), queryDTO.getPageSize(), true);
         LambdaQueryWrapper<LiquidationDetail> wrapper = new LambdaQueryWrapper<>();
@@ -48,7 +49,7 @@ public class LiquidationDetailService extends ServiceImpl<LiquidationDetailMappe
     @Transactional
     public Boolean save(LiquidationDetailDTO saveDTO){
         LiquidationDetail liquidationDetail = BeanUtils.copyProperties(saveDTO, LiquidationDetail.class);
-        EntityUserUtil.addCreateAndModifyUser(liquidationDetail,new User());
+        EntityUserUtil.addCreateAndModifyUser(liquidationDetail,LoginUserHolder.get());
         save(liquidationDetail);
         return true;
     }
@@ -56,7 +57,7 @@ public class LiquidationDetailService extends ServiceImpl<LiquidationDetailMappe
     @Transactional
     public Boolean update(LiquidationDetailDTO updateDTO){
         LiquidationDetail liquidationDetail = BeanUtils.copyProperties(updateDTO, LiquidationDetail.class);
-        EntityUserUtil.addModifyUser(liquidationDetail,new User());
+        EntityUserUtil.addModifyUser(liquidationDetail,LoginUserHolder.get());
         saveOrUpdate(liquidationDetail);
         return true;
     }

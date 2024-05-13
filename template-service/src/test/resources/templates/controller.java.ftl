@@ -119,7 +119,7 @@ public class ${table.controllerName} {
     /**
     * ${table.comment!}详情接口
     * @param id  ${table.comment!} 主键ID
-    * @return LiquidationDetailVO
+    * @return ${entity}VO
     */
     <#if swagger2>
     @ApiOperation(value = "${table.comment!}详情接口", notes = "${table.comment!}详情接口")

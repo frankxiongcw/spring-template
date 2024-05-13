@@ -1,7 +1,7 @@
 package com.template.core.utils;
 
 import com.alibaba.fastjson.JSON;
-import com.template.core.entity.User;
+import com.template.api.pojo.User;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.Field;
